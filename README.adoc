@@ -1,0 +1,5 @@
+= Compile fx_2_0 on macOS Catalina
+
+The `.fx` files came from https://github.com/prime31/Nez/tree/master/DefaultContentSource/effects[effects] in https://github.com/prime31/Nez[Nez]
+
+The `run` script is based on https://github.com/prime31/FNA-VSCode-Template[prime31/FNA-VSCode-Template]
