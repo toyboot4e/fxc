@@ -28,6 +28,6 @@ done
 
 wait
 
-    echo ""
+echo ""
 printf "finished"
 
