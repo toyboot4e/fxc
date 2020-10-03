@@ -15,7 +15,7 @@ _fxc="$(dirname "$0")/compiler/fxc.exe"
 for file in $(find ./src/** -name "*.fx") ; do
     export WINEDEBUG=fixme-all,err-all
 
-    _out="$(printf "${file}" | sed 's;^./src;./out;g')"
+    _out="$(printf "${file}" | sed 's;^./src;./out;g' | sed 's;$;b;g')"
     echo "compiling \`${file}\` -> \`${_out}\`"
 
     _out_dir="$(dirname "${_out}")"
@@ -24,11 +24,10 @@ for file in $(find ./src/** -name "*.fx") ; do
     fi
 
     wine64 "${_fxc}" /T fx_2_0 "$file" /Fo "${_out}" &
-
-    echo ""
 done
 
 wait
 
+    echo ""
 printf "finished"
 
