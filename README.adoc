@@ -2,4 +2,4 @@
 
 The `.fx` files came from https://github.com/prime31/Nez/tree/master/DefaultContentSource/effects[effects] in https://github.com/prime31/Nez[Nez]
 
-The `run` script is based on https://github.com/prime31/FNA-VSCode-Template[prime31/FNA-VSCode-Template]
+The `run` script is based on https://github.com/prime31/FNA-VSCode-Template/blob/master/.vscode/buildEffects.sh[buildEffects.sh] in https://github.com/prime31/FNA-VSCode-Template[prime31/FNA-VSCode-Template]
