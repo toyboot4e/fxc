@@ -1,0 +1,34 @@
+#!/usr/bin/env bash -euE
+
+# Compiles all `.fx` files in `src` directory
+#
+# $ brew install wine winetricks
+# $ WINE=/usr/local/bin/wine64 sh winetricks d3dcompiler_43
+
+IFS=$'\n\t'
+
+printf "building shader files.."
+
+cd "$(dirname "$0")"
+_fxc="$(dirname "$0")/compiler/fxc.exe"
+
+for file in $(find ./src/** -name "*.fx") ; do
+    export WINEDEBUG=fixme-all,err-all
+
+    _out="$(printf "${file}" | sed 's;^./src;./out;g')"
+    echo "compiling \`${file}\` -> \`${_out}\`"
+
+    _out_dir="$(dirname "${_out}")"
+    if ! [ -d "${_out_dir}" ] ; then
+        mkdir -p "${_out_dir}"
+    fi
+
+    wine64 "${_fxc}" /T fx_2_0 "$file" /Fo "${_out}" &
+
+    echo ""
+done
+
+wait
+
+printf "finished"
+
