@@ -1,11 +1,5 @@
 = Compile fx_2_0 on macOS
 
-The `.fx` files came from https://github.com/prime31/Nez/tree/master/DefaultContentSource/effects[effects] in https://github.com/prime31/Nez[Nez]
-
-The `run` script is based on https://github.com/prime31/FNA-VSCode-Template/blob/master/.vscode/buildEffects.sh[buildEffects.sh] in https://github.com/prime31/FNA-VSCode-Template[prime31/FNA-VSCode-Template]
-
-The shader compiler came from https://github.com/prime31/Nez/tree/master/DefaultContentSource/FNAShaderCompiler[Nez/DefaultContentSource/FNAShaderCompiler].
-
 == Installation
 
 Run the following script:
@@ -17,4 +11,10 @@ $ WINE=/usr/local/bin/wine64 sh winetricks d3dcompiler_43
 ----
 
 Then we can `./run` the script to compile `.fx` files in `src` directory :)
+
+== Note
+
+* The `.fx` files came from https://github.com/prime31/Nez/tree/master/DefaultContentSource/effects[effects] in https://github.com/prime31/Nez[Nez]
+* The `run` script is based on https://github.com/prime31/FNA-VSCode-Template/blob/master/.vscode/buildEffects.sh[buildEffects.sh] in https://github.com/prime31/FNA-VSCode-Template[prime31/FNA-VSCode-Template]
+* The shader compiler came from https://github.com/prime31/Nez/tree/master/DefaultContentSource/FNAShaderCompiler[Nez/DefaultContentSource/FNAShaderCompiler].
 
