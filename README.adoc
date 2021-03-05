@@ -1,4 +1,4 @@
-= Compile fx_2_0 on macOS Catalina
+= Compile fx_2_0 on macOS
 
 The `.fx` files came from https://github.com/prime31/Nez/tree/master/DefaultContentSource/effects[effects] in https://github.com/prime31/Nez[Nez]
 
